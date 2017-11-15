@@ -1,9 +1,9 @@
 # **Finding Lane Lines on the Road** 
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-
-![](https://github.com/whs2k/findingLaneLines/test_videos/Solid_Yellow_Left.gif)
-![](https://github.com/whs2k/findingLaneLines/test_videos/Solid_Yellow_Left_Original.gif)
+![Alt Text](https://github.com/whs2k/findingLaneLines/test_videos/Solid_Yellow_Left.gif)
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://github.com/whs2k/findingLaneLines/test_videos/Solid_Yellow_Left_Original.gif)
 
 
 
