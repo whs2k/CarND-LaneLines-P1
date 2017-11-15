@@ -2,11 +2,12 @@
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 ![Alt Text](https://github.com/whs2k/findingLaneLines/blob/master/test_videos/Solid_Yellow_Left.gif?raw=true)
-![Alt Text](https://github.com/whs2k/findingLaneLines/blob/master/test_videos/Solid_Yellow_Left_Original.gif?raw=true)
 ![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://github.com/whs2k/findingLaneLines/blob/master/test_videos/Solid_Yellow_Left_Original.gif?raw=true)
 
 
-Project Write
+
+Project WriteUp
 ---
 
 ### 1. The Pipeline
@@ -18,7 +19,7 @@ This project used a series of transformations (five) and masks (two) to detect a
   5. Create an Mask of the Region of Interest `line_img = region_of_interest(line_img, v)`
   6. Draw Hough Lines on the Image 
       `cv2.HoughLinesP(mask, 0.8, np.pi/180, 25, np.array([]), minLineLength=50, maxLineGap=200)`
-  7. Combine Mask w/Lines and Original Image 'weighted_img(line_img, image)'
+  7. Combine Mask w/Lines and Original Image `weighted_img(line_img, image)`
 
 ### 2. Shortcomings
 Two issues plagued me during this project. Other than the obvious frustration that acompangies installing new packages (sike: pip and homebrew make movie and cv installation a breeze), I received a constant error message when creating my pipeline: `TypeError: 'numpy.ndarray' object is not callable weighted_img`
@@ -28,7 +29,7 @@ After StackOverflow was surprisingly unhelpful, it took me a few retries and ker
 ### 3. Improvements
 More Challenging Videos please! Anything offroad to test? How about some collisions (morbid as that is) to see what happens to the algos when they are really stretched. Great first project, excited for more!
 
-
+---
 Original Prompt
 ---
 
