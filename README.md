@@ -2,9 +2,8 @@
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 ![Alt Text](https://github.com/whs2k/findingLaneLines/blob/master/test_videos/Solid_Yellow_Left.gif?raw=true)
+![Alt Text](https://github.com/whs2k/findingLaneLines/blob/master/test_videos/Solid_Yellow_Left_Original.gif?raw=true)
 ![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
-![Alt Text](https://github.com/whs2k/findingLaneLines/test_videos/Solid_Yellow_Left_Original.gif)
-
 
 
 Creating a Great Writeup
