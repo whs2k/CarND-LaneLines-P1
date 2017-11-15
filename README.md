@@ -6,22 +6,27 @@
 ![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
 
 
-Creating a Great Writeup
+Project Write
 ---
-For this project, a great writeup should provide a detailed response to the "Reflection" section of the [project rubric](https://review.udacity.com/#!/rubrics/322/view). There are three parts to the reflection:
 
-1. Describe the pipeline
+### 1. The Pipeline
+This project used a series of transformations (five) and masks (two) to detect and draw lane lines on an image or series of images (videso). The Pipeline was as follows:
+  1. Import image `matplotlib.image`
+  2. Transform Image to Greyscale `cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)`
+  3. Identify Edges with Canny Function `cv2.Canny(img, low_threshold, high_threshold)`
+  4. Gaussian Smoothing `cv2.GaussianBlur(img, (kernel_size, kernel_size), 0)`
+  5. Create an Mask of the Region of Interest `line_img = region_of_interest(line_img, v)`
+  6. Draw Hough Lines on the Image 
+      `cv2.HoughLinesP(mask, 0.8, np.pi/180, 25, np.array([]), minLineLength=50, maxLineGap=200)`
+  7. Combine Mask w/Lines and Original Image 'weighted_img(line_img, image)'
 
-2. Identify any shortcomings
+### 2. Shortcomings
+Two issues plagued me during this project. Other than the obvious frustration that acompangies installing new packages (sike: pip and homebrew make movie and cv installation a breeze), I received a constant error message when creating my pipeline: `TypeError: 'numpy.ndarray' object is not callable weighted_img`
 
-3. Suggest possible improvements
+After StackOverflow was surprisingly unhelpful, it took me a few retries and kernel restarts to figure out that you only should process each image and create each mask once, as additional processing is not done on the original image. Watch yout for your global variables; there are lots of functions that use the word 'image.'
 
-We encourage using images in your writeup to demonstrate how your pipeline works.  
-
-All that said, please be concise!  We're not looking for you to write a book here: just a brief description.
-
-You're not required to use markdown for your writeup.  If you use another method please just submit a pdf of your writeup. Here is a link to a [writeup template file](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md). 
-
+### 3. Improvements
+More Challenging Videos please! Anything offroad to test? How about some collisions (morbid as that is) to see what happens to the algos when they are really stretched. Great first project, excited for more!
 
 
 Original Prompt
