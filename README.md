@@ -1,11 +1,10 @@
 # **Finding Lane Lines on the Road** 
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-![alt text][gif1]
-![alt text][gif2]
 
-[gif2]: https://github.com/whs2k/findingLaneLines/test_videos/Solid_Yellow_Left_Original.gif "Originial"
-[gif1]: https://github.com/whs2k/findingLaneLines/test_videos/Solid_Yellow_Left.gif "Modified"
+![](https://github.com/whs2k/findingLaneLines/test_videos/Solid_Yellow_Left.gif)
+![](https://github.com/whs2k/findingLaneLines/test_videos/Solid_Yellow_Left_Original.gif)
+
 
 
 Creating a Great Writeup
