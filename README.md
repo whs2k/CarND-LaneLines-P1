@@ -14,10 +14,14 @@ Project WriteUp
 This project used a series of transformations (five) and masks (two) to detect and draw lane lines on an image or series of images (videso). The Pipeline was as follows:
   1. Import image `matplotlib.image`
   2. Transform Image to Greyscale `cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)`
+    The image is then vectorized via the Darkness RGB value (0-255)
   3. Identify Edges with Canny Function `cv2.Canny(img, low_threshold, high_threshold)`
+    This function looks at the sharpest gradients to determine and 'edge'
   4. Gaussian Smoothing `cv2.GaussianBlur(img, (kernel_size, kernel_size), 0)`
   5. Create an Mask of the Region of Interest `line_img = region_of_interest(line_img, v)`
+    Generally a outward facing triangle, to isolate the lane markers and remove noise
   6. Draw Hough Lines on the Image 
+    Determines whether the smoothed Canny edges are lines or not
       `cv2.HoughLinesP(mask, 0.8, np.pi/180, 25, np.array([]), minLineLength=50, maxLineGap=200)`
   7. Combine Mask w/Lines and Original Image `weighted_img(line_img, image)`
 
@@ -25,6 +29,8 @@ This project used a series of transformations (five) and masks (two) to detect a
 Two issues plagued me during this project. Other than the obvious frustration that acompangies installing new packages (sike: pip and homebrew make movie and cv installation a breeze), I received a constant error message when creating my pipeline: `TypeError: 'numpy.ndarray' object is not callable weighted_img`
 
 After StackOverflow was surprisingly unhelpful, it took me a few retries and kernel restarts to figure out that you only should process each image and create each mask once, as additional processing is not done on the original image. Watch yout for your global variables; there are lots of functions that use the word 'image.'
+
+I also ran into some trouble in loading in multiple images for the video portion. [This repo](https://github.com/ypwhs/CarND-LaneLines-P1/blob/master/P1.ipynb) was super helpful in figuring it out.
 
 ### 3. Improvements
 More Challenging Videos please! Anything offroad to test? How about some collisions (morbid as that is) to see what happens to the algos when they are really stretched. Great first project, excited for more!
